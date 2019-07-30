@@ -55,16 +55,16 @@
 *********************************************************************************************************
 */
 
-#define  BSP_BIT_RCC_PLLCFGR_PLLM               25u
-#define  BSP_BIT_RCC_PLLCFGR_PLLN              336u
+#define  BSP_BIT_RCC_PLLCFGR_PLLM               15u
+#define  BSP_BIT_RCC_PLLCFGR_PLLN              144u
 #define  BSP_BIT_RCC_PLLCFGR_PLLP                2u
-#define  BSP_BIT_RCC_PLLCFGR_PLLQ                7u
+#define  BSP_BIT_RCC_PLLCFGR_PLLQ                5u
 
 
-#define  BSP_GPIOG_LED1                        DEF_BIT_06
-#define  BSP_GPIOG_LED2                        DEF_BIT_08
-#define  BSP_GPIOI_LED3                        DEF_BIT_09
-#define  BSP_GPIOC_LED4                        DEF_BIT_07
+#define  BSP_GPIOB_LED1                        DEF_BIT_08
+#define  BSP_GPIOB_LED2                        DEF_BIT_09
+#define  BSP_GPIOB_LED3                        DEF_BIT_08
+#define  BSP_GPIOB_LED4                        DEF_BIT_09
 
 /*
 *********************************************************************************************************
@@ -209,6 +209,44 @@ void  BSP_Init (void)
     BSP_CPU_REG_DBGMCU_CR &= ~BSP_DBGMCU_CR_TRACE_MODE_MASK;    /* Clr trace mode sel bits.                             */
     BSP_CPU_REG_DBGMCU_CR |=  BSP_DBGMCU_CR_TRACE_MODE_SYNC_04; /* Cfg trace mode to synch 4-bit.                       */
 #endif
+
+
+//		RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+//		RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+//		/** Configure the main internal regulator output voltage 
+//		*/
+//		__HAL_RCC_PWR_CLK_ENABLE();
+//		__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+//		/** Initializes the CPU, AHB and APB busses clocks 
+//		*/
+//		RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+//		RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+//		RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+//		RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+//		RCC_OscInitStruct.PLL.PLLM = 15;
+//		RCC_OscInitStruct.PLL.PLLN = 144;
+//		RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+//		RCC_OscInitStruct.PLL.PLLQ = 5;
+//		if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+//		{
+//			//Error_Handler();
+//		}
+//		/** Initializes the CPU, AHB and APB busses clocks 
+//		*/
+//		RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+//																|RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+//		RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
+//		RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+//		RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+//		RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+//		if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+//		{
+//			//Error_Handler();
+//		}
+		
+		BSP_LED_Init();
 }
 
 
@@ -325,29 +363,49 @@ void BSP_Tick_Init (void)
 
 static void  BSP_LED_Init()
 {
+	
+	
+//	GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+//	/* GPIO Ports Clock Enable */
+//	__HAL_RCC_GPIOH_CLK_ENABLE();
+//	__HAL_RCC_GPIOA_CLK_ENABLE();
+//	__HAL_RCC_GPIOB_CLK_ENABLE();
+
+//	/*Configure GPIO pin Output Level */
+//	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8|GPIO_PIN_9, GPIO_PIN_RESET);
+
+//	/*Configure GPIO pins : PB8 PB9 */
+//	GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
+//	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+//	GPIO_InitStruct.Pull = GPIO_NOPULL;
+//	GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
+//	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
     GPIO_InitTypeDef  gpio_init;
 
 
 //    BSP_PeriphEn(BSP_PERIPH_ID_GPIOG);                          /* Configure GPIOG for LED1 and LED2                    */
-
-    gpio_init.Pin   = BSP_GPIOG_LED1 | BSP_GPIOG_LED2;
-    gpio_init.Pin   = BSP_GPIOG_LED1 | BSP_GPIOG_LED2;
-    gpio_init.Mode  = GPIO_MODE_OUTPUT_PP;
-    gpio_init.Pull  = GPIO_PULLUP;
+		BSP_PeriphEn(BSP_PERIPH_ID_GPIOB);                          /* Configure GPIOG for LED1 and LED2                    */
+	 // __HAL_RCC_GPIOB_CLK_ENABLE();
+    gpio_init.Pin   = GPIO_PIN_8 | GPIO_PIN_9;
+    gpio_init.Mode  = GPIO_MODE_OUTPUT_OD;
+    gpio_init.Pull  = GPIO_NOPULL;
     gpio_init.Speed = GPIO_SPEED_HIGH;
 
-    HAL_GPIO_Init(GPIOG, &gpio_init);
+    HAL_GPIO_Init(GPIOB, &gpio_init);
+	
+	  HAL_GPIO_WritePin(GPIOB, (BSP_GPIOB_LED1 | BSP_GPIOB_LED2), GPIO_PIN_SET);
 
 //    BSP_PeriphEn(BSP_PERIPH_ID_GPIOI);                          /* Configure GPIOI for LED3                             */
 
-    gpio_init.Pin = BSP_GPIOI_LED3;
-    HAL_GPIO_Init(GPIOI, &gpio_init);
+//    gpio_init.Pin = BSP_GPIOI_LED3;
+// //   HAL_GPIO_Init(GPIOI, &gpio_init);
 
 
 //    BSP_PeriphEn(BSP_PERIPH_ID_GPIOC);                          /* Configure GPIOC for LED4                             */
 
-    gpio_init.Pin = BSP_GPIOC_LED4;
-    HAL_GPIO_Init(GPIOC, &gpio_init);
+//    gpio_init.Pin = BSP_GPIOC_LED4;
+//    HAL_GPIO_Init(GPIOC, &gpio_init);
 }
 
 
@@ -375,37 +433,37 @@ static void  BSP_LED_Init()
 
 void  BSP_LED_On (CPU_INT08U  led)
 {
-    switch (led) {
-        case 0u:
-             HAL_GPIO_WritePin(GPIOG, (BSP_GPIOG_LED1 | BSP_GPIOG_LED2), GPIO_PIN_SET);
-             HAL_GPIO_WritePin(GPIOI, BSP_GPIOI_LED3, GPIO_PIN_SET);
-             HAL_GPIO_WritePin(GPIOC, BSP_GPIOC_LED4, GPIO_PIN_SET);
-             break;
+//    switch (led) {
+//        case 0u:
+//             HAL_GPIO_WritePin(GPIOG, (BSP_GPIOG_LED1 | BSP_GPIOG_LED2), GPIO_PIN_SET);
+//             HAL_GPIO_WritePin(GPIOI, BSP_GPIOI_LED3, GPIO_PIN_SET);
+//             HAL_GPIO_WritePin(GPIOC, BSP_GPIOC_LED4, GPIO_PIN_SET);
+//             break;
 
 
-        case 1u:
-             HAL_GPIO_WritePin(GPIOG, BSP_GPIOG_LED1, GPIO_PIN_SET);
-             break;
+//        case 1u:
+//             HAL_GPIO_WritePin(GPIOG, BSP_GPIOG_LED1, GPIO_PIN_SET);
+//             break;
 
 
-        case 2u:
-             HAL_GPIO_WritePin(GPIOG, BSP_GPIOG_LED2, GPIO_PIN_SET);
-             break;
+//        case 2u:
+//             HAL_GPIO_WritePin(GPIOG, BSP_GPIOG_LED2, GPIO_PIN_SET);
+//             break;
 
 
-        case 3u:
-             HAL_GPIO_WritePin(GPIOI, BSP_GPIOI_LED3, GPIO_PIN_SET);
-             break;
+//        case 3u:
+//             HAL_GPIO_WritePin(GPIOI, BSP_GPIOI_LED3, GPIO_PIN_SET);
+//             break;
 
 
-        case 4u:
-             HAL_GPIO_WritePin(GPIOC, BSP_GPIOC_LED4, GPIO_PIN_SET);
-             break;
+//        case 4u:
+//             HAL_GPIO_WritePin(GPIOC, BSP_GPIOC_LED4, GPIO_PIN_SET);
+//             break;
 
 
-        default:
-             break;
-    }
+//        default:
+//             break;
+//    }
 }
 
 
@@ -433,37 +491,37 @@ void  BSP_LED_On (CPU_INT08U  led)
 
 void  BSP_LED_Off (CPU_INT08U led)
 {
-    switch (led) {
-        case 0u:
-             HAL_GPIO_WritePin(GPIOG, (BSP_GPIOG_LED1 | BSP_GPIOG_LED2), GPIO_PIN_RESET);
-             HAL_GPIO_WritePin(GPIOI, BSP_GPIOI_LED3, GPIO_PIN_RESET);
-             HAL_GPIO_WritePin(GPIOC, BSP_GPIOC_LED4, GPIO_PIN_RESET);
-             break;
+//    switch (led) {
+//        case 0u:
+//             HAL_GPIO_WritePin(GPIOG, (BSP_GPIOG_LED1 | BSP_GPIOG_LED2), GPIO_PIN_RESET);
+//             HAL_GPIO_WritePin(GPIOI, BSP_GPIOI_LED3, GPIO_PIN_RESET);
+//             HAL_GPIO_WritePin(GPIOC, BSP_GPIOC_LED4, GPIO_PIN_RESET);
+//             break;
 
 
-        case 1u:
-             HAL_GPIO_WritePin(GPIOG, BSP_GPIOG_LED1, GPIO_PIN_RESET);
-             break;
+//        case 1u:
+//             HAL_GPIO_WritePin(GPIOG, BSP_GPIOG_LED1, GPIO_PIN_RESET);
+//             break;
 
 
-        case 2u:
-             HAL_GPIO_WritePin(GPIOG, BSP_GPIOG_LED2, GPIO_PIN_RESET);
-             break;
+//        case 2u:
+//             HAL_GPIO_WritePin(GPIOG, BSP_GPIOG_LED2, GPIO_PIN_RESET);
+//             break;
 
 
-        case 3u:
-             HAL_GPIO_WritePin(GPIOI, BSP_GPIOI_LED3, GPIO_PIN_RESET);
-             break;
+//        case 3u:
+//             HAL_GPIO_WritePin(GPIOI, BSP_GPIOI_LED3, GPIO_PIN_RESET);
+//             break;
 
 
-        case 4u:
-             HAL_GPIO_WritePin(GPIOC, BSP_GPIOC_LED4, GPIO_PIN_RESET);
-             break;
+//        case 4u:
+//             HAL_GPIO_WritePin(GPIOC, BSP_GPIOC_LED4, GPIO_PIN_RESET);
+//             break;
 
 
-        default:
-             break;
-    }
+//        default:
+//             break;
+//    }
 }
 
 
@@ -491,35 +549,35 @@ void  BSP_LED_Off (CPU_INT08U led)
 
 void  BSP_LED_Toggle (CPU_INT08U  led)
 {
-    switch (led) {
-        case 0u:
-             HAL_GPIO_TogglePin(GPIOG,(BSP_GPIOG_LED1 | BSP_GPIOG_LED2));
-             HAL_GPIO_TogglePin(GPIOI, BSP_GPIOI_LED3);
-             HAL_GPIO_TogglePin(GPIOC, BSP_GPIOC_LED4);
-             break;
+//    switch (led) {
+//        case 0u:
+//             HAL_GPIO_TogglePin(GPIOG,(BSP_GPIOG_LED1 | BSP_GPIOG_LED2));
+//             HAL_GPIO_TogglePin(GPIOI, BSP_GPIOI_LED3);
+//             HAL_GPIO_TogglePin(GPIOC, BSP_GPIOC_LED4);
+//             break;
 
 
-        case 1u:
-             HAL_GPIO_TogglePin(GPIOG,BSP_GPIOG_LED1);
-             break;
+//        case 1u:
+//             HAL_GPIO_TogglePin(GPIOG,BSP_GPIOG_LED1);
+//             break;
 
 
-        case 2u:
-             HAL_GPIO_TogglePin(GPIOG, BSP_GPIOG_LED2);
-             break;
+//        case 2u:
+//             HAL_GPIO_TogglePin(GPIOG, BSP_GPIOG_LED2);
+//             break;
 
 
-        case 3u:
-             HAL_GPIO_TogglePin(GPIOI, BSP_GPIOI_LED3);
-             break;
+//        case 3u:
+//             HAL_GPIO_TogglePin(GPIOI, BSP_GPIOI_LED3);
+//             break;
 
 
-        case 4u:
-             HAL_GPIO_TogglePin(GPIOC, BSP_GPIOC_LED4);
-             break;
+//        case 4u:
+//             HAL_GPIO_TogglePin(GPIOC, BSP_GPIOC_LED4);
+//             break;
 
 
-        default:
-             break;
-    }
+//        default:
+//             break;
+//    }
 }

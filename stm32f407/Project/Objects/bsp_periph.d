@@ -1,0 +1,12 @@
+.\objects\bsp_periph.o: ..\User\BSP\bsp_periph.c
+.\objects\bsp_periph.o: ..\User\BSP\bsp.h
+.\objects\bsp_periph.o: ..\User\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
+.\objects\bsp_periph.o: ..\User\uC-CPU\cpu_def.h
+.\objects\bsp_periph.o: ..\User\APP\cpu_cfg.h
+.\objects\bsp_periph.o: ..\User\uC-CPU\cpu_core.h
+.\objects\bsp_periph.o: ..\User\uC-LIB\lib_def.h
+.\objects\bsp_periph.o: ..\User\uC-LIB\lib_mem.h
+.\objects\bsp_periph.o: ..\User\uC-CPU\cpu_core.h
+.\objects\bsp_periph.o: ..\User\APP\lib_cfg.h
+.\objects\bsp_periph.o: ..\User\uC-LIB\lib_str.h
+.\objects\bsp_periph.o: ..\User\uC-LIB\lib_ascii.h

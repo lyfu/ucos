@@ -151,6 +151,9 @@ static  void  AppTaskObj1    (void  *p_arg);
 
 int main(void)
 {
+//	HAL_Init();
+//	BSP_Init();  
+//	while(1);
     OS_ERR   err;
 #if (CPU_CFG_NAME_EN == DEF_ENABLED)
     CPU_ERR  cpu_err;
@@ -166,6 +169,9 @@ int main(void)
                 (CPU_ERR  *)&cpu_err);
 #endif
 
+//	  BSP_Init();                                                 /* Initialize BSP functions                             */
+//		while(1);
+	
     BSP_IntDisAll();                                            /* Disable all Interrupts.                              */
 
     OSInit(&err);                                               /* Init uC/OS-III.                                      */
@@ -245,7 +251,7 @@ static  void  AppTaskStart (void *p_arg)
 
     BSP_Init();                                                 /* Initialize BSP functions                             */
     CPU_Init();                                                 /* Initialize the uC/CPU services                       */
-
+    
 #if OS_CFG_STAT_TASK_EN > 0u
     OSStatTaskCPUUsageInit(&err);                               /* Compute CPU capacity with no task running            */
 #endif
@@ -257,15 +263,15 @@ static  void  AppTaskStart (void *p_arg)
 #if (APP_CFG_SERIAL_EN == DEF_ENABLED)
 //    App_SerialInit();                                           /* Initialize Serial Communication for Application ...  */
 #endif
-
+    HAL_GPIO_WritePin(GPIOB, (GPIO_PIN_8 | GPIO_PIN_9), GPIO_PIN_RESET);
 //    APP_TRACE_DBG(("Creating Application kernel objects\n\r"));
     AppObjCreate();                                             /* Create Applicaiton kernel objects                    */
 
 //    APP_TRACE_DBG(("Creating Application Tasks\n\r"));
     AppTaskCreate();                                            /* Create Application tasks                             */
 
-    BSP_LED_Off(0u);
-
+ //   BSP_LED_Off(0u);
+   
     while (DEF_TRUE) {                                          /* Task body, always written as an infinite loop.       */
         BSP_LED_Toggle(0u);
         OSTimeDlyHMSM(0u, 0u, 0u, 100u,
@@ -448,6 +454,8 @@ static  void  AppTaskObj0 (void  *p_arg)
 
 
     while (DEF_TRUE) {
+			
+			//HAL_GPIO_WritePin(GPIOB, (GPIO_PIN_8 | GPIO_PIN_9), GPIO_PIN_RESET);
 #if (OS_CFG_SEM_EN > 0u)
         OSSemPost(&AppTaskObjSem,
                    OS_OPT_POST_1,

@@ -1,5 +1,5 @@
 Dependencies for Project 'stm32f407-usociii', Target 'Target 1': (DO NOT MODIFY !)
-F (..\User\APP\app.c)(0x5D3FD699)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\User\APP -I ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\User\BSP -I ..\User\uC-CPU\ARM-Cortex-M4\RealView -I ..\User\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\User\uCOS-III\Source -I ..\User\uC-CPU -I ..\User\uC-LIB -I ..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I E:\stm32\ucos\stm32f407\Project\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
+F (..\User\APP\app.c)(0x5D4009D4)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\User\APP -I ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\User\BSP -I ..\User\uC-CPU\ARM-Cortex-M4\RealView -I ..\User\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\User\uCOS-III\Source -I ..\User\uC-CPU -I ..\User\uC-LIB -I ..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I E:\stm32\ucos\stm32f407\Project\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x569DEA3A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x569DEA3A)
@@ -184,7 +184,7 @@ I (..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spdifrx.h)
 F (..\User\APP\os_app_hooks.h)(0x5535FEB6)()
 F (..\User\APP\os_cfg.h)(0x5535FEB6)()
 F (..\User\APP\os_cfg_app.h)(0x5535FEB6)()
-F (..\User\BSP\bsp.c)(0x5D3FD6C3)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\User\APP -I ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\User\BSP -I ..\User\uC-CPU\ARM-Cortex-M4\RealView -I ..\User\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\User\uCOS-III\Source -I ..\User\uC-CPU -I ..\User\uC-LIB -I ..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I E:\stm32\ucos\stm32f407\Project\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp.o --omf_browse .\objects\bsp.crf --depend .\objects\bsp.d)
+F (..\User\BSP\bsp.c)(0x5D40090D)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\User\APP -I ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\User\BSP -I ..\User\uC-CPU\ARM-Cortex-M4\RealView -I ..\User\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\User\uCOS-III\Source -I ..\User\uC-CPU -I ..\User\uC-LIB -I ..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I E:\stm32\ucos\stm32f407\Project\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp.o --omf_browse .\objects\bsp.crf --depend .\objects\bsp.d)
 I (..\User\BSP\bsp.h)(0x553607A6)
 I (..\User\uC-CPU\ARM-Cortex-M4\RealView\cpu.h)(0x54E15FD8)
 I (..\User\uC-CPU\cpu_def.h)(0x54E15FDA)
@@ -298,6 +298,17 @@ I (..\User\APP\lib_cfg.h)(0x5535FEB6)
 I (..\User\uC-LIB\lib_str.h)(0x53211E92)
 I (..\User\uC-LIB\lib_ascii.h)(0x53211E90)
 I (..\User\BSP\bsp.h)(0x553607A6)
+F (..\User\BSP\bsp_periph.c)(0x553607A6)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\User\APP -I ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\User\BSP -I ..\User\uC-CPU\ARM-Cortex-M4\RealView -I ..\User\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\User\uCOS-III\Source -I ..\User\uC-CPU -I ..\User\uC-LIB -I ..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I E:\stm32\ucos\stm32f407\Project\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\bsp_periph.o --omf_browse .\objects\bsp_periph.crf --depend .\objects\bsp_periph.d)
+I (..\User\BSP\bsp.h)(0x553607A6)
+I (..\User\uC-CPU\ARM-Cortex-M4\RealView\cpu.h)(0x54E15FD8)
+I (..\User\uC-CPU\cpu_def.h)(0x54E15FDA)
+I (..\User\APP\cpu_cfg.h)(0x553EF224)
+I (..\User\uC-CPU\cpu_core.h)(0x54E15FDA)
+I (..\User\uC-LIB\lib_def.h)(0x53211E90)
+I (..\User\uC-LIB\lib_mem.h)(0x53745A40)
+I (..\User\APP\lib_cfg.h)(0x5535FEB6)
+I (..\User\uC-LIB\lib_str.h)(0x53211E92)
+I (..\User\uC-LIB\lib_ascii.h)(0x53211E90)
 F (..\User\uC-CPU\ARM-Cortex-M4\RealView\cpu.h)(0x54E15FD8)()
 F (..\User\uC-CPU\ARM-Cortex-M4\RealView\cpu_a.asm)(0x54E15FD8)(--cpu Cortex-M4.fp -g --apcs=interwork -I E:\stm32\ucos\stm32f407\Project\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 518" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list .\listings\cpu_a.lst --xref -o .\objects\cpu_a.o --depend .\objects\cpu_a.d)
 F (..\User\uC-CPU\ARM-Cortex-M4\RealView\cpu_c.c)(0x54E15FD8)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\User\APP -I ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\User\BSP -I ..\User\uC-CPU\ARM-Cortex-M4\RealView -I ..\User\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\User\uCOS-III\Source -I ..\User\uC-CPU -I ..\User\uC-LIB -I ..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I E:\stm32\ucos\stm32f407\Project\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o .\objects\cpu_c.o --omf_browse .\objects\cpu_c.crf --depend .\objects\cpu_c.d)

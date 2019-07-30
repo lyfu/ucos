@@ -17,7 +17,7 @@ Library Manager: ArmAr.exe V5.06 update 1 (build 61)
 Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
 CPU DLL:         SARMCM3.DLL V5.18
 Dialog DLL:      DCM.DLL V1.13.6.0
-Target DLL:      UL2CM3.DLL V1.157.5.0
+Target DLL:      Segger\JL2CM3.dll V2.99.18.0
 Dialog DLL:      TCM.DLL V1.14.8.0
  
 <h2>Project:</h2>
@@ -27,10 +27,55 @@ Project File Date:  07/30/2019
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-assembling startup_stm32f407xx.s...
+compiling app.c...
+..\User\APP\app.c(615): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          while (((2.00 * eps) < delta) ||
+..\User\APP\app.c(617): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              c   = (a + b) / 2.00;
+..\User\APP\app.c(621): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              if (((f_a > 0.0) && (f_c < 0.0)) ||
+..\User\APP\app.c(621): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              if (((f_a > 0.0) && (f_c < 0.0)) ||
+..\User\APP\app.c(622): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                  ((f_a < 0.0) && (f_c > 0.0))) {
+..\User\APP\app.c(622): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                  ((f_a < 0.0) && (f_c > 0.0))) {
+..\User\APP\app.c(624): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              } else if (((f_a > 0.0) && (f_c > 0.0)) ||
+..\User\APP\app.c(624): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              } else if (((f_a > 0.0) && (f_c > 0.0)) ||
+..\User\APP\app.c(625): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                         ((f_a < 0.0) && (f_c < 0.0))) {
+..\User\APP\app.c(625): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                         ((f_a < 0.0) && (f_c < 0.0))) {
+..\User\APP\app.c(704): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          while ((2.00 * eps) < delta) {
+..\User\APP\app.c(705): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              c   = (a + b) / 2.0;
+..\User\APP\app.c(706): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              f_a = a * a - 3.0;
+..\User\APP\app.c(707): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              f_c = c * c - 3.0;
+..\User\APP\app.c(709): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              if (((f_a > 0.0) && (f_c < 0.0)) ||
+..\User\APP\app.c(709): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              if (((f_a > 0.0) && (f_c < 0.0)) ||
+..\User\APP\app.c(710): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                  ((f_a < 0.0) && (f_c > 0.0))) {
+..\User\APP\app.c(710): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                  ((f_a < 0.0) && (f_c > 0.0))) {
+..\User\APP\app.c(712): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              } else if (((f_a > 0.0) && (f_c > 0.0)) ||
+..\User\APP\app.c(712): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              } else if (((f_a > 0.0) && (f_c > 0.0)) ||
+..\User\APP\app.c(713): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                         ((f_a < 0.0) && (f_c < 0.0))) {
+..\User\APP\app.c(713): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                         ((f_a < 0.0) && (f_c < 0.0))) {
+..\User\APP\app.c: 22 warnings, 0 errors
 linking...
-Program Size: Code=30020 RO-data=1332 RW-data=240 ZI-data=16512  
-".\Objects\stm32f407-usociii.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=30180 RO-data=1332 RW-data=240 ZI-data=16512  
+".\Objects\stm32f407-usociii.axf" - 0 Error(s), 22 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -61,7 +106,7 @@ Package Vendor: Keil
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
       Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>
