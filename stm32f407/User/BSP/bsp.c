@@ -55,10 +55,15 @@
 *********************************************************************************************************
 */
 
-#define  BSP_BIT_RCC_PLLCFGR_PLLM               15u
-#define  BSP_BIT_RCC_PLLCFGR_PLLN              144u
+//#define  BSP_BIT_RCC_PLLCFGR_PLLM               15u
+//#define  BSP_BIT_RCC_PLLCFGR_PLLN              144u
+//#define  BSP_BIT_RCC_PLLCFGR_PLLP                2u
+//#define  BSP_BIT_RCC_PLLCFGR_PLLQ                5u
+
+#define  BSP_BIT_RCC_PLLCFGR_PLLM               25u
+#define  BSP_BIT_RCC_PLLCFGR_PLLN              336u
 #define  BSP_BIT_RCC_PLLCFGR_PLLP                2u
-#define  BSP_BIT_RCC_PLLCFGR_PLLQ                5u
+#define  BSP_BIT_RCC_PLLCFGR_PLLQ                7u
 
 
 #define  BSP_GPIOB_LED1                        DEF_BIT_08
@@ -196,12 +201,15 @@ void  BSP_Init (void)
     RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;           /* APB2CLK = AHBCLK  / APB2DIV(2)       = 84MHz.        */
     HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5);
 
-                                                                /* STM32F405x/407x/415x/417x Revision Z devices: ...... */
+ //                                                          /* STM32F405x/407x/415x/417x Revision Z devices: ...... */
     if (HAL_GetREVID() == 0x1001)                               /* ....prefetch is supported                            */
     {
       __HAL_FLASH_PREFETCH_BUFFER_ENABLE();                     /* Enable the Flash prefetch                            */
     }
-
+  //  HAL_RCC_GetHCLKFreq();
+		//HAL_SYSTICK_Config(SystemCoreClock / 100000);    
+		
+		HAL_InitTick (TICK_INT_PRIORITY);
     BSP_LED_Init();                                             /* Init LEDs.                                           */
 
 #ifdef TRACE_EN                                                 /* See project / compiler preprocessor options.         */
@@ -246,7 +254,7 @@ void  BSP_Init (void)
 //			//Error_Handler();
 //		}
 		
-		BSP_LED_Init();
+		//BSP_LED_Init();
 }
 
 
@@ -581,3 +589,15 @@ void  BSP_LED_Toggle (CPU_INT08U  led)
 //             break;
 //    }
 }
+
+
+void HardFault_Handler(void)  
+{  
+   
+  if (CoreDebug->DHCSR & 1) {  //check C_DEBUGEN == 1 -> Debugger Connected  
+      __breakpoint(0);  // halt program execution here         
+  }  
+  while (1)  
+  {  
+  }  
+}  

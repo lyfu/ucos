@@ -209,6 +209,7 @@ void  OSStatTaskCPUUsageInit (OS_ERR  *p_err)
     OSTimeDly((OS_TICK )2,                                  /* Synchronize with clock tick                            */
               (OS_OPT  )OS_OPT_TIME_DLY,
               (OS_ERR *)&err);
+		//HAL_GPIO_WritePin(GPIOB, (GPIO_PIN_8 | GPIO_PIN_9), GPIO_PIN_RESET);
     if (err != OS_ERR_NONE) {
        *p_err = err;
         return;
