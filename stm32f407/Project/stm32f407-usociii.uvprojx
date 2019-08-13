@@ -132,12 +132,12 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <Capability>1</Capability>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -330,9 +330,9 @@
             <vShortWch>1</vShortWch>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>USE_HAL_DRIVER, STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\User\APP;..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc;..\User\BSP;..\User\uC-CPU\ARM-Cortex-M4\RealView;..\User\uC-LIB\Ports\ARM-Cortex-M4\RealView;..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\User\uCOS-III\Source;..\User\uC-CPU;..\User\uC-LIB</IncludePath>
+              <IncludePath>..\User\APP;..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc;..\User\BSP;..\User\uC-CPU\ARM-Cortex-M4\RealView;..\User\uC-LIB\Ports\ARM-Cortex-M4\RealView;..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView;..\User\uCOS-III\Source;..\User\uC-CPU;..\User\uC-LIB;..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -435,6 +435,21 @@
               <FileName>bsp.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\User\BSP\bsp.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_int.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\BSP\bsp_int.c</FilePath>
+            </File>
+            <File>
+              <FileName>cpu_bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\BSP\cpu_bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_periph.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\BSP\bsp_periph.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -955,6 +970,26 @@
               <FileName>stm32f4xx_hal_wwdg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_wwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_fmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fsmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_sdmmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_sdmmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_usb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c</FilePath>
             </File>
           </Files>
         </Group>

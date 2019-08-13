@@ -253,7 +253,7 @@ static  void  AppTaskStart (void *p_arg)
     CPU_Init();                                                 /* Initialize the uC/CPU services                       */
     
 #if OS_CFG_STAT_TASK_EN > 0u
-    //OSStatTaskCPUUsageInit(&err);                               /* Compute CPU capacity with no task running            */
+    OSStatTaskCPUUsageInit(&err);                               /* Compute CPU capacity with no task running            */
 #endif
   
 #ifdef CPU_CFG_INT_DIS_MEAS_EN
@@ -263,7 +263,7 @@ static  void  AppTaskStart (void *p_arg)
 #if (APP_CFG_SERIAL_EN == DEF_ENABLED)
 //    App_SerialInit();                                           /* Initialize Serial Communication for Application ...  */
 #endif
- //   HAL_GPIO_WritePin(GPIOB, (GPIO_PIN_8 | GPIO_PIN_9), GPIO_PIN_RESET);
+//    HAL_GPIO_WritePin(GPIOB, (GPIO_PIN_8 | GPIO_PIN_9), GPIO_PIN_RESET);
 //    APP_TRACE_DBG(("Creating Application kernel objects\n\r"));
     AppObjCreate();                                             /* Create Applicaiton kernel objects                    */
 
@@ -273,7 +273,7 @@ static  void  AppTaskStart (void *p_arg)
  //   BSP_LED_Off(0u);
    
     while (DEF_TRUE) {                                          /* Task body, always written as an infinite loop.       */
-        BSP_LED_Toggle(0u);
+        //BSP_LED_Toggle(0u);
         OSTimeDlyHMSM(0u, 0u, 0u, 100u,
                       OS_OPT_TIME_HMSM_STRICT,
                       &err);
@@ -452,13 +452,11 @@ static  void  AppTaskObj0 (void  *p_arg)
 
     (void)p_arg;
 
-#if OS_CFG_STAT_TASK_EN > 0u
-    OSStatTaskCPUUsageInit(&os_err);                               /* Compute CPU capacity with no task running            */
-#endif
+
 	
     while (DEF_TRUE) {
-			
-			HAL_GPIO_WritePin(GPIOB, (GPIO_PIN_8 | GPIO_PIN_9), GPIO_PIN_RESET);
+			  BSP_LED_Toggle(0u);
+		//	HAL_GPIO_WritePin(GPIOB, (GPIO_PIN_8 | GPIO_PIN_9), GPIO_PIN_RESET);
 #if (OS_CFG_SEM_EN > 0u)
         OSSemPost(&AppTaskObjSem,
                    OS_OPT_POST_1,

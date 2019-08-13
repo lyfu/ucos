@@ -1,0 +1,17 @@
+.\objects\zepif.o: ..\User\LwIP\netif\zepif.c
+.\objects\zepif.o: ..\User\LwIP\include\netif/zepif.h
+.\objects\zepif.o: ..\User\LwIP\include\lwip/opt.h
+.\objects\zepif.o: ..\User\ARCH\lwipopts.h
+.\objects\zepif.o: ..\User\LwIP\include\lwip/debug.h
+.\objects\zepif.o: ..\User\LwIP\include\lwip/arch.h
+.\objects\zepif.o: ..\User\arch/cc.h
+.\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+.\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\zepif.o: ..\User\LwIP\include\lwip/opt.h
+.\objects\zepif.o: ..\User\LwIP\include\netif/lowpan6.h
+.\objects\zepif.o: ..\User\LwIP\include\netif/lowpan6_opts.h

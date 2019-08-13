@@ -207,7 +207,7 @@ void  BSP_Init (void)
       __HAL_FLASH_PREFETCH_BUFFER_ENABLE();                     /* Enable the Flash prefetch                            */
     }
   //  HAL_RCC_GetHCLKFreq();
-		//HAL_SYSTICK_Config(SystemCoreClock / 100000);    
+	//	HAL_SYSTICK_Config(SystemCoreClock / 100000);    
 		
 		HAL_InitTick (TICK_INT_PRIORITY);
     BSP_LED_Init();                                             /* Init LEDs.                                           */
@@ -557,6 +557,8 @@ void  BSP_LED_Off (CPU_INT08U led)
 
 void  BSP_LED_Toggle (CPU_INT08U  led)
 {
+	
+	 HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_8);
 //    switch (led) {
 //        case 0u:
 //             HAL_GPIO_TogglePin(GPIOG,(BSP_GPIOG_LED1 | BSP_GPIOG_LED2));

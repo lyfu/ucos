@@ -1,0 +1,14 @@
+.\objects\ethernetif.o: ..\User\ARCH\ethernetif.c
+.\objects\ethernetif.o: ..\User\LwIP\include\lwip/opt.h
+.\objects\ethernetif.o: ..\User\ARCH\lwipopts.h
+.\objects\ethernetif.o: ..\User\LwIP\include\lwip/debug.h
+.\objects\ethernetif.o: ..\User\LwIP\include\lwip/arch.h
+.\objects\ethernetif.o: ..\User\arch/cc.h
+.\objects\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+.\objects\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\objects\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\ethernetif.o: ..\User\LwIP\include\lwip/opt.h
