@@ -1,9 +1,9 @@
 .\objects\autoip.o: ..\User\LwIP\core\ipv4\autoip.c
 .\objects\autoip.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\autoip.o: ..\User\ARCH\lwipopts.h
+.\objects\autoip.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\autoip.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\autoip.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\autoip.o: ..\User\arch/cc.h
+.\objects\autoip.o: ..\User\ARCH\arch/cc.h
 .\objects\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\autoip.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

@@ -1,9 +1,9 @@
 .\objects\dns.o: ..\User\LwIP\core\dns.c
 .\objects\dns.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\dns.o: ..\User\ARCH\lwipopts.h
+.\objects\dns.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\dns.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\dns.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\dns.o: ..\User\arch/cc.h
+.\objects\dns.o: ..\User\ARCH\arch/cc.h
 .\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

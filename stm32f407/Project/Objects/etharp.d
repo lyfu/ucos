@@ -1,9 +1,9 @@
 .\objects\etharp.o: ..\User\LwIP\core\ipv4\etharp.c
 .\objects\etharp.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\etharp.o: ..\User\ARCH\lwipopts.h
+.\objects\etharp.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\etharp.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\etharp.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\etharp.o: ..\User\arch/cc.h
+.\objects\etharp.o: ..\User\ARCH\arch/cc.h
 .\objects\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\etharp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

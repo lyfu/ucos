@@ -2,10 +2,10 @@
 .\objects\lowpan6_ble.o: ..\User\LwIP\include\netif/lowpan6_ble.h
 .\objects\lowpan6_ble.o: ..\User\LwIP\include\netif/lowpan6_opts.h
 .\objects\lowpan6_ble.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\lowpan6_ble.o: ..\User\ARCH\lwipopts.h
+.\objects\lowpan6_ble.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\lowpan6_ble.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\lowpan6_ble.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\lowpan6_ble.o: ..\User\arch/cc.h
+.\objects\lowpan6_ble.o: ..\User\ARCH\arch/cc.h
 .\objects\lowpan6_ble.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\lowpan6_ble.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\lowpan6_ble.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

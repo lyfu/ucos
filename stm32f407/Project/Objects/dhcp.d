@@ -1,9 +1,9 @@
 .\objects\dhcp.o: ..\User\LwIP\core\ipv4\dhcp.c
 .\objects\dhcp.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\dhcp.o: ..\User\ARCH\lwipopts.h
+.\objects\dhcp.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\dhcp.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\dhcp.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\dhcp.o: ..\User\arch/cc.h
+.\objects\dhcp.o: ..\User\ARCH\arch/cc.h
 .\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\dhcp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

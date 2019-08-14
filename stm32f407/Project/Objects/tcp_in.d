@@ -1,9 +1,9 @@
 .\objects\tcp_in.o: ..\User\LwIP\core\tcp_in.c
 .\objects\tcp_in.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\tcp_in.o: ..\User\ARCH\lwipopts.h
+.\objects\tcp_in.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\tcp_in.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\tcp_in.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\tcp_in.o: ..\User\arch/cc.h
+.\objects\tcp_in.o: ..\User\ARCH\arch/cc.h
 .\objects\tcp_in.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\tcp_in.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\tcp_in.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

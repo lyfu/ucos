@@ -1,10 +1,10 @@
 .\objects\zepif.o: ..\User\LwIP\netif\zepif.c
 .\objects\zepif.o: ..\User\LwIP\include\netif/zepif.h
 .\objects\zepif.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\zepif.o: ..\User\ARCH\lwipopts.h
+.\objects\zepif.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\zepif.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\zepif.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\zepif.o: ..\User\arch/cc.h
+.\objects\zepif.o: ..\User\ARCH\arch/cc.h
 .\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\zepif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

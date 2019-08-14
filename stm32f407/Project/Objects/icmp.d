@@ -1,9 +1,9 @@
 .\objects\icmp.o: ..\User\LwIP\core\ipv4\icmp.c
 .\objects\icmp.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\icmp.o: ..\User\ARCH\lwipopts.h
+.\objects\icmp.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\icmp.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\icmp.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\icmp.o: ..\User\arch/cc.h
+.\objects\icmp.o: ..\User\ARCH\arch/cc.h
 .\objects\icmp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\icmp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\icmp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

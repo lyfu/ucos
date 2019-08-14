@@ -1,9 +1,9 @@
 .\objects\stats.o: ..\User\LwIP\core\stats.c
 .\objects\stats.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\stats.o: ..\User\ARCH\lwipopts.h
+.\objects\stats.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\stats.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\stats.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\stats.o: ..\User\arch/cc.h
+.\objects\stats.o: ..\User\ARCH\arch/cc.h
 .\objects\stats.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\stats.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\stats.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

@@ -1,9 +1,9 @@
 .\objects\inet_chksum.o: ..\User\LwIP\core\inet_chksum.c
 .\objects\inet_chksum.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\inet_chksum.o: ..\User\ARCH\lwipopts.h
+.\objects\inet_chksum.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\inet_chksum.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\inet_chksum.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\inet_chksum.o: ..\User\arch/cc.h
+.\objects\inet_chksum.o: ..\User\ARCH\arch/cc.h
 .\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\inet_chksum.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

@@ -1,9 +1,9 @@
 .\objects\udp.o: ..\User\LwIP\core\udp.c
 .\objects\udp.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\udp.o: ..\User\ARCH\lwipopts.h
+.\objects\udp.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\udp.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\udp.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\udp.o: ..\User\arch/cc.h
+.\objects\udp.o: ..\User\ARCH\arch/cc.h
 .\objects\udp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\udp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\udp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

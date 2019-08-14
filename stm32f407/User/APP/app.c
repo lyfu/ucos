@@ -592,71 +592,71 @@ static  void  AppTaskObj1 (void  *p_arg)
 
 void  AppTaskEq0Fp (void  *p_arg)
 {
-    CPU_FP32    a;
-    CPU_FP32    b;
-    CPU_FP32    c;
-    CPU_FP32    eps;
-    CPU_FP32    f_a;
-    CPU_FP32    f_c;
-    CPU_FP32    delta;
-    CPU_INT08U  iteration;
-    RAND_NBR    wait_cycles;
+//    CPU_FP32    a;
+//    CPU_FP32    b;
+//    CPU_FP32    c;
+//    CPU_FP32    eps;
+//    CPU_FP32    f_a;
+//    CPU_FP32    f_c;
+//    CPU_FP32    delta;
+//    CPU_INT08U  iteration;
+//    RAND_NBR    wait_cycles;
 
 
     while (DEF_TRUE) {
-        eps       = 0.00001;
-        a         = 3.0;
-        b         = 4.0;
-        delta     = a - b;
-        iteration = 0u;
-        if (delta < 0) {
-            delta = delta * -1.0;
-        }
+//        eps       = 0.00001;
+//        a         = 3.0;
+//        b         = 4.0;
+//        delta     = a - b;
+//        iteration = 0u;
+//        if (delta < 0) {
+//            delta = delta * -1.0;
+//        }
 
-        while (((2.00 * eps) < delta) ||
-               (iteration    > 20u  )) {
-            c   = (a + b) / 2.00;
-            f_a = (exp((-1.0) * a) * (3.2 * sin(a) - 0.5 * cos(a)));
-            f_c = (exp((-1.0) * c) * (3.2 * sin(c) - 0.5 * cos(c)));
+//        while (((2.00 * eps) < delta) ||
+//               (iteration    > 20u  )) {
+//            c   = (a + b) / 2.00;
+//            f_a = (exp((-1.0) * a) * (3.2 * sin(a) - 0.5 * cos(a)));
+//            f_c = (exp((-1.0) * c) * (3.2 * sin(c) - 0.5 * cos(c)));
 
-            if (((f_a > 0.0) && (f_c < 0.0)) ||
-                ((f_a < 0.0) && (f_c > 0.0))) {
-                b = c;
-            } else if (((f_a > 0.0) && (f_c > 0.0)) ||
-                       ((f_a < 0.0) && (f_c < 0.0))) {
-                a = c;
-            } else {
-                break;
-            }
+//            if (((f_a > 0.0) && (f_c < 0.0)) ||
+//                ((f_a < 0.0) && (f_c > 0.0))) {
+//                b = c;
+//            } else if (((f_a > 0.0) && (f_c > 0.0)) ||
+//                       ((f_a < 0.0) && (f_c < 0.0))) {
+//                a = c;
+//            } else {
+//                break;
+//            }
 
-            delta = a - b;
-            if (delta < 0) {
-               delta = delta * -1.0;
-            }
-            iteration++;
+//            delta = a - b;
+//            if (delta < 0) {
+//               delta = delta * -1.0;
+//            }
+//            iteration++;
 
-            wait_cycles = Math_Rand();
-            wait_cycles = wait_cycles % 1000;
+//            wait_cycles = Math_Rand();
+//            wait_cycles = wait_cycles % 1000;
 
-            while (wait_cycles > 0u) {
-                wait_cycles--;
-            }
+//            while (wait_cycles > 0u) {
+//                wait_cycles--;
+//            }
 
-            if (iteration > APP_TASK_EQ_0_ITERATION_NBR) {
-//                APP_TRACE_INFO(("AppTaskEq0Fp() max # iteration reached\n"));
-                break;
-            }
-        }
+//            if (iteration > APP_TASK_EQ_0_ITERATION_NBR) {
+////                APP_TRACE_INFO(("AppTaskEq0Fp() max # iteration reached\n"));
+//                break;
+//            }
+//        }
 
-//        APP_TRACE_INFO(("Eq0 Task Running ....\n"));
+////        APP_TRACE_INFO(("Eq0 Task Running ....\n"));
 
-        if (iteration == APP_TASK_EQ_0_ITERATION_NBR) {
-#if 0                                                           /* See Note 1.                                         */
-//            APP_TRACE_INFO(("Root = %f; f(c) = %f; #iterations : %d\n", c, f_c, iteration));
-#else
-//            APP_TRACE_INFO(("Eq0 task; #iterations : %d\n", iteration));
-#endif
-        }
+//        if (iteration == APP_TASK_EQ_0_ITERATION_NBR) {
+//#if 0                                                           /* See Note 1.                                         */
+////            APP_TRACE_INFO(("Root = %f; f(c) = %f; #iterations : %d\n", c, f_c, iteration));
+//#else
+////            APP_TRACE_INFO(("Eq0 task; #iterations : %d\n", iteration));
+//#endif
+//        }
     }
 }
 
@@ -680,71 +680,71 @@ void  AppTaskEq0Fp (void  *p_arg)
 
 void  AppTaskEq1Fp (void  *p_arg)
 {
-    CPU_FP32    a;
-    CPU_FP32    b;
-    CPU_FP32    c;
-    CPU_FP32    eps;
-    CPU_FP32    f_a;
-    CPU_FP32    f_c;
-    CPU_FP32    delta;
-    CPU_INT08U  iteration;
-    RAND_NBR    wait_cycles;
+//    CPU_FP32    a;
+//    CPU_FP32    b;
+//    CPU_FP32    c;
+//    CPU_FP32    eps;
+//    CPU_FP32    f_a;
+//    CPU_FP32    f_c;
+//    CPU_FP32    delta;
+//    CPU_INT08U  iteration;
+//    RAND_NBR    wait_cycles;
 
 
     while (DEF_TRUE) {
-        eps       = 0.00001;
-        a         = 1.0;
-        b         = 4.0;
-        delta     = a - b;
-        iteration = 0u;
+//        eps       = 0.00001;
+//        a         = 1.0;
+//        b         = 4.0;
+//        delta     = a - b;
+//        iteration = 0u;
 
-        if (delta < 0) {
-            delta = delta * -1.0;
-        }
+//        if (delta < 0) {
+//            delta = delta * -1.0;
+//        }
 
-        while ((2.00 * eps) < delta) {
-            c   = (a + b) / 2.0;
-            f_a = a * a - 3.0;
-            f_c = c * c - 3.0;
+//        while ((2.00 * eps) < delta) {
+//            c   = (a + b) / 2.0;
+//            f_a = a * a - 3.0;
+//            f_c = c * c - 3.0;
 
-            if (((f_a > 0.0) && (f_c < 0.0)) ||
-                ((f_a < 0.0) && (f_c > 0.0))) {
-                b = c;
-            } else if (((f_a > 0.0) && (f_c > 0.0)) ||
-                       ((f_a < 0.0) && (f_c < 0.0))) {
-                a = c;
-            } else {
-                break;
-            }
+//            if (((f_a > 0.0) && (f_c < 0.0)) ||
+//                ((f_a < 0.0) && (f_c > 0.0))) {
+//                b = c;
+//            } else if (((f_a > 0.0) && (f_c > 0.0)) ||
+//                       ((f_a < 0.0) && (f_c < 0.0))) {
+//                a = c;
+//            } else {
+//                break;
+//            }
 
-            delta = a - b;
-            if (delta < 0) {
-               delta = delta * -1.0;
-            }
-            iteration++;
+//            delta = a - b;
+//            if (delta < 0) {
+//               delta = delta * -1.0;
+//            }
+//            iteration++;
 
-            wait_cycles = Math_Rand();
-            wait_cycles = wait_cycles % 1000;
+//            wait_cycles = Math_Rand();
+//            wait_cycles = wait_cycles % 1000;
 
-            while (wait_cycles > 0u) {
-                wait_cycles--;
-            }
+//            while (wait_cycles > 0u) {
+//                wait_cycles--;
+//            }
 
-            if (iteration > APP_TASK_EQ_1_ITERATION_NBR) {
-//                APP_TRACE_INFO(("AppTaskEq1Fp() max # iteration reached\n"));
-                break;
-            }
-        }
+//            if (iteration > APP_TASK_EQ_1_ITERATION_NBR) {
+////                APP_TRACE_INFO(("AppTaskEq1Fp() max # iteration reached\n"));
+//                break;
+//            }
+//        }
 
-//        APP_TRACE_INFO(("Eq1 Task Running ....\n"));
+////        APP_TRACE_INFO(("Eq1 Task Running ....\n"));
 
-        if (iteration == APP_TASK_EQ_1_ITERATION_NBR) {
-#if 0                                                           /* See Note 1.                                         */
-//            APP_TRACE_INFO(("Root = %f; f(c) = %f; #iterations : %d\n", c, f_c, iteration));
-#else
-//            APP_TRACE_INFO(("Eq1 task; #iterations : %d\n", iteration));
-#endif
-        }
+//        if (iteration == APP_TASK_EQ_1_ITERATION_NBR) {
+//#if 0                                                           /* See Note 1.                                         */
+////            APP_TRACE_INFO(("Root = %f; f(c) = %f; #iterations : %d\n", c, f_c, iteration));
+//#else
+////            APP_TRACE_INFO(("Eq1 task; #iterations : %d\n", iteration));
+//#endif
+//        }
     }
 }
 

@@ -1,9 +1,9 @@
 .\objects\ip4.o: ..\User\LwIP\core\ipv4\ip4.c
 .\objects\ip4.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\ip4.o: ..\User\ARCH\lwipopts.h
+.\objects\ip4.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\ip4.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\ip4.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\ip4.o: ..\User\arch/cc.h
+.\objects\ip4.o: ..\User\ARCH\arch/cc.h
 .\objects\ip4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\ip4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\ip4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

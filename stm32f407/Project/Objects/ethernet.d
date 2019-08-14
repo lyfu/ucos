@@ -1,9 +1,9 @@
 .\objects\ethernet.o: ..\User\LwIP\netif\ethernet.c
 .\objects\ethernet.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\ethernet.o: ..\User\ARCH\lwipopts.h
+.\objects\ethernet.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\ethernet.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\ethernet.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\ethernet.o: ..\User\arch/cc.h
+.\objects\ethernet.o: ..\User\ARCH\arch/cc.h
 .\objects\ethernet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\ethernet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\ethernet.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

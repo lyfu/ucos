@@ -1,9 +1,9 @@
 .\objects\ip4_frag.o: ..\User\LwIP\core\ipv4\ip4_frag.c
 .\objects\ip4_frag.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\ip4_frag.o: ..\User\ARCH\lwipopts.h
+.\objects\ip4_frag.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\ip4_frag.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\ip4_frag.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\ip4_frag.o: ..\User\arch/cc.h
+.\objects\ip4_frag.o: ..\User\ARCH\arch/cc.h
 .\objects\ip4_frag.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\ip4_frag.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\ip4_frag.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

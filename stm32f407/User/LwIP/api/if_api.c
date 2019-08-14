@@ -42,7 +42,6 @@
 #include "lwip/opt.h"
 
 #if LWIP_SOCKET
-
 #include "lwip/errno.h"
 #include "lwip/if_api.h"
 #include "lwip/netifapi.h"

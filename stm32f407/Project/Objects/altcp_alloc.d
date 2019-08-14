@@ -1,9 +1,9 @@
 .\objects\altcp_alloc.o: ..\User\LwIP\core\altcp_alloc.c
 .\objects\altcp_alloc.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\altcp_alloc.o: ..\User\ARCH\lwipopts.h
+.\objects\altcp_alloc.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\altcp_alloc.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\altcp_alloc.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\altcp_alloc.o: ..\User\arch/cc.h
+.\objects\altcp_alloc.o: ..\User\ARCH\arch/cc.h
 .\objects\altcp_alloc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\altcp_alloc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\altcp_alloc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

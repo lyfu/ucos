@@ -1,9 +1,9 @@
 .\objects\raw.o: ..\User\LwIP\core\raw.c
 .\objects\raw.o: ..\User\LwIP\include\lwip/opt.h
-.\objects\raw.o: ..\User\ARCH\lwipopts.h
+.\objects\raw.o: ..\User\ARCH\arch\lwipopts.h
 .\objects\raw.o: ..\User\LwIP\include\lwip/debug.h
 .\objects\raw.o: ..\User\LwIP\include\lwip/arch.h
-.\objects\raw.o: ..\User\arch/cc.h
+.\objects\raw.o: ..\User\ARCH\arch/cc.h
 .\objects\raw.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\raw.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\raw.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
