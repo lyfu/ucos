@@ -6049,7 +6049,7 @@ Section Cross References
     sys_arch.o(i.sys_mbox_trypost) refers to sys_arch.o(.constdata) for pvNullPointer
     sys_arch.o(i.sys_mbox_trypost_fromisr) refers to sys_arch.o(i.sys_mbox_trypost) for sys_mbox_trypost
     sys_arch.o(i.sys_mbox_valid) refers to strcmpv7m.o(.text) for strcmp
-    sys_arch.o(i.sys_now) refers to sys_arch.o(.data) for lwip_sys_now
+    sys_arch.o(i.sys_now) refers to os_time.o(i.OSTimeGet) for OSTimeGet
     sys_arch.o(i.sys_sem_free) refers to os_sem.o(i.OSSemDel) for OSSemDel
     sys_arch.o(i.sys_sem_new) refers to os_sem.o(i.OSSemCreate) for OSSemCreate
     sys_arch.o(i.sys_sem_set_invalid) refers to sys_arch.o(i.sys_sem_valid) for sys_sem_valid
@@ -8768,7 +8768,7 @@ Removing Unused input sections from the image.
     Removing sys_arch.o(i.sys_mbox_trypost), (48 bytes).
     Removing sys_arch.o(i.sys_mbox_trypost_fromisr), (16 bytes).
     Removing sys_arch.o(i.sys_mbox_valid), (36 bytes).
-    Removing sys_arch.o(i.sys_now), (12 bytes).
+    Removing sys_arch.o(i.sys_now), (30 bytes).
     Removing sys_arch.o(i.sys_sem_free), (16 bytes).
     Removing sys_arch.o(i.sys_sem_new), (48 bytes).
     Removing sys_arch.o(i.sys_sem_set_invalid), (20 bytes).
@@ -8784,7 +8784,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f4xx.o(i.SystemCoreClockUpdate), (192 bytes).
     Removing system_stm32f4xx.o(.constdata), (24 bytes).
 
-2170 unused section(s) (total 348725 bytes) removed from the image.
+2170 unused section(s) (total 348743 bytes) removed from the image.
 
 ==============================================================================
 

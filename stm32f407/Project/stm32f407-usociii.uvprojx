@@ -997,6 +997,16 @@
           <GroupName>LwIP/API</GroupName>
           <Files>
             <File>
+              <FileName>if_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\LwIP\api\if_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>netifapi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\LwIP\api\netifapi.c</FilePath>
+            </File>
+            <File>
               <FileName>api_lib.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\LwIP\api\api_lib.c</FilePath>
@@ -1012,11 +1022,6 @@
               <FilePath>..\User\LwIP\api\err.c</FilePath>
             </File>
             <File>
-              <FileName>if_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\User\LwIP\api\if_api.c</FilePath>
-            </File>
-            <File>
               <FileName>netbuf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\LwIP\api\netbuf.c</FilePath>
@@ -1025,11 +1030,6 @@
               <FileName>netdb.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\LwIP\api\netdb.c</FilePath>
-            </File>
-            <File>
-              <FileName>netifapi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\User\LwIP\api\netifapi.c</FilePath>
             </File>
             <File>
               <FileName>sockets.c</FileName>

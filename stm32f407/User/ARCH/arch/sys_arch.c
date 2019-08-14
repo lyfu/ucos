@@ -386,7 +386,11 @@ u32_t
 sys_now(void)
 {
   //lwip_sys_now = xTaskGetTickCount();
-  return lwip_sys_now;
+	u32_t ucos_time, lwip_time;
+	ucos_time=OSTimeGet(NULL);	//获取当前系统时间 得到的是UCOS的节拍数
+	lwip_time=(ucos_time*1000/OS_CFG_TICK_RATE_HZ+1);//将节拍数转换为LWIP的时间MS
+	return lwip_time; 		//返回lwip_time; 
+  //return lwip_sys_now;
 }
 
 //互斥体部分不实现了, 用二值信号量取代
