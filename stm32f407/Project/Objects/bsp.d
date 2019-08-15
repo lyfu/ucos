@@ -10,13 +10,10 @@
 .\objects\bsp.o: ..\User\APP\lib_cfg.h
 .\objects\bsp.o: ..\User\uC-LIB\lib_str.h
 .\objects\bsp.o: ..\User\uC-LIB\lib_ascii.h
-.\objects\bsp.o: ..\User\uCOS-III\Source\os.h
-.\objects\bsp.o: ..\User\APP\os_cfg.h
-.\objects\bsp.o: ..\User\uCOS-III\Source\os_type.h
-.\objects\bsp.o: ..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 .\objects\bsp.o: ..\User\APP\stm32f4xx_hal_conf.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h
+.\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
@@ -30,7 +27,6 @@
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
 .\objects\bsp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h
@@ -87,3 +83,7 @@
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cec.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_fmpi2c.h
 .\objects\bsp.o: ..\User\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spdifrx.h
+.\objects\bsp.o: ..\User\uCOS-III\Source\os.h
+.\objects\bsp.o: ..\User\APP\os_cfg.h
+.\objects\bsp.o: ..\User\uCOS-III\Source\os_type.h
+.\objects\bsp.o: ..\User\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
