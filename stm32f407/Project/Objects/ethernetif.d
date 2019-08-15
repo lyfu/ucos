@@ -108,3 +108,4 @@
 .\objects\ethernetif.o: ..\User\LwIP\include\netif/ethernet.h
 .\objects\ethernetif.o: ..\User\ARCH\arch\ethernetif.h
 .\objects\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\ethernetif.o: ..\User\BSP\bsp_eth.h

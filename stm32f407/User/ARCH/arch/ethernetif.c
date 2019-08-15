@@ -44,6 +44,7 @@
 #include "netif/etharp.h"
 #include "ethernetif.h"
 #include <string.h>
+#include "bsp_eth.h"
 
 
 /* Global Ethernet handle */
@@ -92,7 +93,7 @@ static void low_level_init(struct netif *netif)
   HAL_StatusTypeDef hal_eth_init_status;
   
   //³õÊ¼»¯bsp¡ªeth
-  //hal_eth_init_status = Bsp_Eth_Init();
+  hal_eth_init_status = Bsp_Eth_Init();
 
   if (hal_eth_init_status == HAL_OK)
   {
