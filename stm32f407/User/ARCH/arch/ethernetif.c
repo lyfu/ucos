@@ -472,6 +472,7 @@ static err_t low_level_output_arp_off(struct netif *netif, struct pbuf *q, const
 //    {
 //      /* network cable is disconnected */
 //      netif_set_link_down(netif);
+//		netif_set_down(netif);
 //    }
 //  }
 //}
@@ -590,6 +591,55 @@ __weak void ethernetif_notify_conn_changed(struct netif *netif)
 #endif /* LWIP_NETIF_LINK_CALLBACK */
 
 
-
+////lwipx:lwip控制结构体指针
+//void lwip_comm_default_ip_set(__lwip_dev *lwipx)
+//{
+//	u32 sn0;
+//	sn0=*(vu32*)(0x1FFF7A10);//获取STM32的唯一ID的前24位作为MAC地址后三字节
+//	//默认远端IP为:192.168.1.60
+//	lwipx->remoteip[0]=pTcpClientRegisterList->remoteIpValue.u8_data[0];	
+//	lwipx->remoteip[1]=pTcpClientRegisterList->remoteIpValue.u8_data[1];
+//	lwipx->remoteip[2]=pTcpClientRegisterList->remoteIpValue.u8_data[2];
+//	lwipx->remoteip[3]=pTcpClientRegisterList->remoteIpValue.u8_data[3];
+//	//MAC地址设置(高三字节固定为:2.0.0,低三字节用STM32唯一ID)
+//	lwipx->mac[0]=2;//高三字节(IEEE称之为组织唯一ID,OUI)地址固定为:2.0.0
+//	lwipx->mac[1]=0;
+//	lwipx->mac[2]=0;
+//	lwipx->mac[3]=(sn0>>16)&0XFF;//低三字节用STM32的唯一ID
+//	lwipx->mac[4]=(sn0>>8)&0XFFF;;
+//	lwipx->mac[5]=sn0&0XFF; 
+//	//默认本地IP为:192.168.1.30
+//	if(TcpClientPassword == system_mode_order){
+//		lwipx->ip[0]=pTcpClientRegisterList->localIpValue.u8_data[0];	
+//		lwipx->ip[1]=pTcpClientRegisterList->localIpValue.u8_data[1];
+//		lwipx->ip[2]=pTcpClientRegisterList->localIpValue.u8_data[2];
+//		lwipx->ip[3]=pTcpClientRegisterList->localIpValue.u8_data[3];
+//	}else{
+//		lwipx->ip[0]=pTcpServerRegisterList->ipValue.u8_data[0];	
+//		lwipx->ip[1]=pTcpServerRegisterList->ipValue.u8_data[1];
+//		lwipx->ip[2]=pTcpServerRegisterList->ipValue.u8_data[2];
+//		lwipx->ip[3]=pTcpServerRegisterList->ipValue.u8_data[3];
+//	}
+//	
+//	//默认子网掩码:255.255.255.0
+//	lwipx->netmask[0]=255;	
+//	lwipx->netmask[1]=255;
+//	lwipx->netmask[2]=255;
+//	lwipx->netmask[3]=0;
+//	//默认网关:192.168.1.1
+//	if(TcpClientPassword == system_mode_order){
+//		lwipx->gateway[0]=pTcpClientRegisterList->localGatewayValue.u8_data[0];	
+//		lwipx->gateway[1]=pTcpClientRegisterList->localGatewayValue.u8_data[1];
+//		lwipx->gateway[2]=pTcpClientRegisterList->localGatewayValue.u8_data[2];
+//		lwipx->gateway[3]=pTcpClientRegisterList->localGatewayValue.u8_data[3];
+//	}else{
+//		lwipx->gateway[0]=pTcpServerRegisterList->gatewayValue.u8_data[0];	
+//		lwipx->gateway[1]=pTcpServerRegisterList->gatewayValue.u8_data[1];
+//		lwipx->gateway[2]=pTcpServerRegisterList->gatewayValue.u8_data[2];
+//		lwipx->gateway[3]=pTcpServerRegisterList->gatewayValue.u8_data[3];
+//	}
+//	
+//	lwipx->dhcpstatus=0;//没有DHCP	
+//} 
 
 
