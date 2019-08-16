@@ -89,16 +89,16 @@ static void Eth_Reset(void)
 { 
    /* PHY RESET: PI1 */
   GPIO_InitTypeDef GPIO_InitStructure;
-  __HAL_RCC_GPIOI_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   
   GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStructure.Pull  = GPIO_PULLUP;
   GPIO_InitStructure.Speed = GPIO_SPEED_FAST;
-  GPIO_InitStructure.Pin = GPIO_PIN_1;
-  HAL_GPIO_Init(GPIOI, &GPIO_InitStructure);
-  HAL_GPIO_WritePin(GPIOI, GPIO_PIN_1, GPIO_PIN_RESET);
+  GPIO_InitStructure.Pin = GPIO_PIN_0;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStructure);
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);
   HAL_Delay(5);
-  HAL_GPIO_WritePin(GPIOI, GPIO_PIN_1, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
   HAL_Delay(5);
 }
 
