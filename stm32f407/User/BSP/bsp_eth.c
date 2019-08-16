@@ -189,15 +189,15 @@ void ETH_IRQHandler(void)
 //  uint32_t ulReturn;
   /* 进入临界段，临界段可以嵌套 */
   //ulReturn = taskENTER_CRITICAL_FROM_ISR();
-	
-	CPU_SR_ALLOC();
-  OS_CRITICAL_ENTER();
-	
+//	
+//	CPU_SR_ALLOC();
+//  OS_CRITICAL_ENTER();
+	OSIntEnter();
   HAL_ETH_IRQHandler(&heth);
-  
+  OSIntExit();
   /* 退出临界段 */
  // taskEXIT_CRITICAL_FROM_ISR( ulReturn );
-	OS_CRITICAL_EXIT() ;
+//	OS_CRITICAL_EXIT() ;
 	
 }
 

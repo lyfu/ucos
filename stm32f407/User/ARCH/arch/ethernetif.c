@@ -50,26 +50,6 @@
 /* Global Ethernet handle */
 extern ETH_HandleTypeDef heth;
 
-//#if defined ( __ICCARM__ ) /*!< IAR Compiler */
-//  #pragma data_alignment=4   
-//#endif
-//__ALIGN_BEGIN ETH_DMADescTypeDef  DMARxDscrTab[ETH_RXBUFNB] __ALIGN_END;/* Ethernet Rx MA Descriptor */
-
-//#if defined ( __ICCARM__ ) /*!< IAR Compiler */
-//  #pragma data_alignment=4   
-//#endif
-//__ALIGN_BEGIN ETH_DMADescTypeDef  DMATxDscrTab[ETH_TXBUFNB] __ALIGN_END;/* Ethernet Tx DMA Descriptor */
-
-//#if defined ( __ICCARM__ ) /*!< IAR Compiler */
-//  #pragma data_alignment=4   
-//#endif
-//__ALIGN_BEGIN uint8_t Rx_Buff[ETH_RXBUFNB][ETH_RX_BUF_SIZE] __ALIGN_END; /* Ethernet Receive Buffer */
-
-//#if defined ( __ICCARM__ ) /*!< IAR Compiler */
-//  #pragma data_alignment=4   
-//#endif
-//__ALIGN_BEGIN uint8_t Tx_Buff[ETH_TXBUFNB][ETH_TX_BUF_SIZE] __ALIGN_END; /* Ethernet Transmit Buffer */
-
 struct ethernetif {
 	struct eth_addr *ethaddr;
 /* Add whatever per-interface state that is needed here. */
@@ -559,6 +539,13 @@ __weak void ethernetif_notify_conn_changed(struct netif *netif)
   /* NOTE : This is function could be implemented in user file 
             when the callback is needed,
   */
+	
+	if(netif_is_link_up(netif) && !netif_is_up(netif))
+	{
+			netif_set_up(netif);
+			extern err_t dhcp_start(struct netif *netif);
+			dhcp_start(netif);
+	}
 
 }
 /* USER CODE END 8 */ 
