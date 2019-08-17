@@ -6,6 +6,8 @@
 ".\objects\cpu_bsp.o"
 ".\objects\bsp_periph.o"
 ".\objects\bsp_eth.o"
+".\objects\bsp_led.o"
+".\objects\bsp_clock.o"
 ".\objects\cpu_a.o"
 ".\objects\cpu_c.o"
 ".\objects\cpu_core.o"

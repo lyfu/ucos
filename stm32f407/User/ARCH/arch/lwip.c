@@ -30,7 +30,7 @@
 /* USER CODE END 0 */
 /* Private function prototypes -----------------------------------------------*/
 /* ETH Variables initialization ----------------------------------------------*/
-void Error_Handler(void);
+//void Error_Handler(void);
 
 /* DHCP Variables initialization ---------------------------------------------*/
 //uint32_t DHCPfineTimer = 0;
